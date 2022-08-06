@@ -2,6 +2,7 @@ import './bootstrap.min.css';
 import React from 'react';
 import HomePage from './homepage.js';
 import ContactUs from './contactus.js';
+import AboutUs from './aboutus.js';
 
 /*
 Copy the Web Chat code from Watson Assitant and paste it here
@@ -32,6 +33,10 @@ class App extends React.Component {
   setPageContactUs = ()=> {
     this.setState({pageshown:<ContactUs/>});    
   }
+
+  setPageAboutUs = ()=> {
+    this.setState({pageshown:<AboutUs/>});    
+  }
   
   render() {
     return (
@@ -43,7 +48,7 @@ class App extends React.Component {
                 <a class="nav-link" href="#" onClick={this.setPageHome}>Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-               <a class="nav-link" href="#" onClick={this.setPageHome}>About us <span class="sr-only">(current)</span></a>
+               <a class="nav-link" href="#" onClick={this.setPageAboutUs}>About us <span class="sr-only">(current)</span></a>
               </li> 
               <li class="nav-item">
                <a class="nav-link" href="#" onClick={this.setPageHome}>Dealer Network <span class="sr-only">(current)</span></a>
